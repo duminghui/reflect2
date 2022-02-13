@@ -2,13 +2,13 @@ package reflect2
 
 import "unsafe"
 
-//go:linkname unsafe_New reflect.unsafe_New
+//go:linkname unsafe_New reflect.unsafe__New
 func unsafe_New(rtype unsafe.Pointer) unsafe.Pointer
 
 //go:linkname typedmemmove reflect.typedmemmove
 func typedmemmove(rtype unsafe.Pointer, dst, src unsafe.Pointer)
 
-//go:linkname unsafe_NewArray reflect.unsafe_NewArray
+//go:linkname unsafe_NewArray reflect.unsafe__NewArray
 func unsafe_NewArray(rtype unsafe.Pointer, length int) unsafe.Pointer
 
 // typedslicecopy copies a slice of elemType values from src to dst,
